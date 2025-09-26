@@ -6,6 +6,7 @@ $(document).ready(function() {
         setTimeout(function() {
             $('.skill-progress.full').animate({'width': '100%'}, 800);
             $('.skill-progress.partial').animate({'width': '60%'}, 800);
+            $('.contact-form-section').fadeIn(600);
         }, 300);
         
     }, 2000);
@@ -43,5 +44,24 @@ $(document).ready(function() {
                 $(this).fadeIn(300);
             }
         });
+    });
+
+    emailjs.init('jchdXQD61mnmMdVev');
+    
+    $('#contact-form').on('submit', async function(e) {
+        e.preventDefault();
+        try {
+            const result = await emailjs.sendForm(
+                'service_r9unl2i',
+                'template_la7wijt', 
+                this
+            );
+            alert('Email envoyé avec succès !');
+            this.reset();
+
+        } catch (error) {
+            console.error('Erreur détaillée:', error);
+            alert('Échec de l\'envoi de l\'email. Vérifiez votre configuration EmailJS.');
+        } 
     });
 });
