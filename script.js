@@ -4,8 +4,8 @@ $(document).ready(function() {
         $('#cvContainer').addClass('show');
         
         setTimeout(function() {
-            $('.skill-progress-full').animate({'width': '100%'}, 800);
-            $('.skill-progress-60').animate({'width': '60%'}, 800);
+            $('.skill-progress.full').animate({'width': '100%'}, 800);
+            $('.skill-progress.partial').animate({'width': '60%'}, 800);
         }, 300);
         
     }, 2000);

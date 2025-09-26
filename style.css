@@ -95,7 +95,7 @@ body {
     margin-bottom: 20px;
 }
 
-.sidebar-title {
+.sidebar-section h3 {
     font-size: 12px;
     font-weight: bold;
     text-transform: uppercase;
@@ -107,6 +107,12 @@ body {
     border-radius: 4px;
 }
 
+.sidebar-section h3 i {
+    margin-right: 6px;
+    color: #16a085;
+    font-size: 11px;
+}
+
 .contact-item {
     display: block;
     margin-bottom: 6px;
@@ -114,17 +120,16 @@ body {
     color: #2c3e50;
 }
 
-.contact-item .icon {
-    display: none;
+.contact-item i {
+    width: 14px;
+    margin-right: 6px;
+    color: #16a085;
+    font-size: 9px;
 }
 
 .skill-item {
     margin-bottom: 8px;
-}
-
-.skill-name {
     font-size: 10px;
-    margin-bottom: 2px;
     color: #2c3e50;
 }
 
@@ -144,27 +149,27 @@ body {
     transition: width 0.8s ease;
 }
 
-.skill-progress-full {
+.skill-progress.full {
     width: 0%;
 }
 
-.skill-progress-60 {
+.skill-progress.partial {
     width: 0%;
 }
 
-.interests-list {
+.interests {
     font-size: 10px;
     line-height: 1.4;
     color: #2c3e50;
 }
 
-.interest-item {
+.interests div {
     margin-bottom: 4px;
     padding-left: 12px;
     position: relative;
 }
 
-.interest-item::before {
+.interests div::before {
     content: '•';
     position: absolute;
     left: 0;
@@ -188,18 +193,24 @@ body {
     border-radius: 8px;
 }
 
-.main-title {
+.header-section h1 {
     font-size: 22px;
     font-weight: bold;
     color: #2c3e50;
     margin-bottom: 8px;
 }
 
+.header-section h1 i {
+    margin-right: 8px;
+    color: #8e44ad;
+    font-size: 20px;
+}
+
 .section {
     margin-bottom: 20px;
 }
 
-.section-title {
+.section h2 {
     font-size: 14px;
     font-weight: bold;
     color: #6a1b9a;
@@ -210,7 +221,13 @@ body {
     border-radius: 4px;
 }
 
-.experience-item, .education-item, .project-item {
+.section h2 i {
+    margin-right: 6px;
+    color: #8e44ad;
+    font-size: 13px;
+}
+
+.item {
     margin-bottom: 12px;
     padding-left: 12px;
     border-left: 3px solid #8e44ad;
@@ -220,13 +237,13 @@ body {
     border-radius: 4px;
 }
 
-.experience-item:hover, .education-item:hover, .project-item:hover {
+.item:hover {
     transform: translateX(8px);
     box-shadow: 0 4px 12px rgba(142, 68, 173, 0.2);
     background: rgba(248, 240, 255, 0.3);
 }
 
-.experience-item::before, .education-item::before, .project-item::before {
+.item::before {
     content: '●';
     position: absolute;
     left: -8px;
@@ -300,7 +317,7 @@ body {
     margin-right: 0;
 }
 
-.profile-text {
+.header-section p {
     font-size: 11px;
     line-height: 1.5;
     color: #2c3e50;
